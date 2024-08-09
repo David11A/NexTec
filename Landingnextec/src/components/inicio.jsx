@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './inicio.css';
 import QuienesSomos from './quienessomos';
+import Servicios from './servicios';
+import Contactos from './contacto';
+
 
 const Inicio = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -62,8 +65,11 @@ const Inicio = () => {
         </div>
       </section>
       <QuienesSomos/>
+      <Servicios/>
+      <Contactos/>   
+      
     </div>
- 
+  
   );
 };
 

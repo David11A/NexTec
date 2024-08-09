@@ -2,7 +2,7 @@ import React from 'react';
 
 const QuienesSomos = () => {
   return (
-    <section className="bg-gray-900 text-white py-12 px-4 md:px-8">
+    <section className="q1 py-12 px-4 md:px-8" style={{ backgroundColor: '#232426', color: 'white' }}>
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-12 mb-12 items-center">
           <div className="md:w-1/4  ">
@@ -39,7 +39,9 @@ const QuienesSomos = () => {
             { title: 'Nuestra Visión', content: 'Vislumbramos un futuro donde cada empresa pueda aprovechar al máximo el potencial de la tecnología digital.' },
             { title: 'Nuestros Valores', content: ['✓ Transparencia', ' ✓ Innovación', '✓ Responsabilidad', '✓ Calidad', '✓ Colaboración'] }
           ].map((card, index) => (
-            <div key={index} className="bg-gray-800 overflow-hidden flex transform -skew-x-12 h-40">
+            <div key={index} className="bg-zinc-900 overflow-hidden flex transform -skew-x-12 h-40">
+ 
+  
               <div className="p-3 flex-1 skew-x-12">
                 <h3 className="text-lg text-center  text-purple-500 mb-2">{card.title}</h3>
                 {Array.isArray(card.content) ? (
