@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Russo+One&display=swap');
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Russo One', sans-serif;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a {
+  color: white;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  transform: skewX(-20deg);
+}
+
+nav a:hover::after {
+  background: #6b21a8;
+  height: 100%;
+  bottom: 0;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #6b21a8;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #6b21a8;
+  transform: skewX(-20deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  height: 100%;
+}
+
+.banner-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 1;
+}
+
+.banner-section h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-section button {
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.parallelogram-button {
+  background: #6b21a8;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 20px;
+  border: none;
+  transform: skew(-20deg);
+  transition: background 0.3s ease-in-out;
+}
+
+.parallelogram-button:hover {
+  background: #5a1a94;
+}
+
+/* Estilos Responsivos */
+.banner-title {
+  font-size: 4rem;
+}
+
+.banner-subtitle {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner-title {
+    font-size: 6rem;
+  }
+  .banner-subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-title {
+    font-size: 9rem;
+  }
+  .banner-subtitle {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9;
+  }
+  .nav-links.block {
+    display: flex;
+  }
+  .nav-link {
+    padding: 1rem;
+  }
+
+  .banner-title {
+    font-size: 3rem;
+  }
+  .banner-subtitle {
+    font-size: 1.25rem;
+  }
+}
