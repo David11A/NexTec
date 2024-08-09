@@ -3,6 +3,7 @@ import './inicio.css';
 import QuienesSomos from './quienessomos';
 import Servicios from './servicios';
 import Contactos from './contacto';
+import Footer from './footer';
 
 
 const Inicio = () => {
@@ -67,9 +68,9 @@ const Inicio = () => {
       <QuienesSomos/>
       <Servicios/>
       <Contactos/>   
-      
+      <Footer/>   
     </div>
-  
+    
   );
 };
 
