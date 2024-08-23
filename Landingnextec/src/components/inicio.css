@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Russo+One&display=swap');
-
 body {
   font-family: 'DM Sans', sans-serif;
+  
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Russo One', sans-serif;
@@ -15,7 +15,21 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   z-index: 10;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  padding: 0 20px;
+}
+
+.nav-visible {
+  transform: translateY(0);
+}
+
+.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 nav a {
@@ -38,12 +52,6 @@ nav a::after {
   transform: skewX(-20deg);
 }
 
-nav a:hover::after {
-  background: #6b21a8;
-  height: 100%;
-  bottom: 0;
-}
-
 .nav-link {
   position: relative;
   display: inline-block;
@@ -51,9 +59,7 @@ nav a:hover::after {
   transition: all 0.3s ease-in-out;
 }
 
-.nav-link:hover {
-  color: #6b21a8;
-}
+
 
 .nav-link::after {
   content: '';
@@ -61,14 +67,15 @@ nav a:hover::after {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 2px;
-  background: #6b21a8;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.192);
   transform: skewX(-20deg);
   transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .nav-link:hover::after {
-  height: 100%;
+  opacity: 1; /* No sliding in effect, just appears */
 }
 
 .banner-section {
@@ -76,15 +83,8 @@ nav a:hover::after {
   overflow: hidden;
 }
 
-.banner-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
-  z-index: 1;
+.social-icons {
+  margin-left: auto; /* Push icons to the right */
 }
 
 .banner-section h1 {
@@ -92,23 +92,30 @@ nav a:hover::after {
 }
 
 .banner-section button {
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.062), 0 1px 3px rgba(0, 0, 0, 0);
 }
 
+
+
+
+
 .parallelogram-button {
-  background: #6b21a8;
-  color: white;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: bold;
-  font-size: 25px;
-  padding: 10px 20px;
-  border: none;
-  transform: skew(-20deg);
-  transition: background 0.3s ease-in-out;
+  @apply bg-purple-700 text-white text-lg py-3 px-6 border-none transition-transform duration-300;
+  transform: skew(-20deg); /* Forma de paralelogramo */
+  font-family: 'DM Sans', sans-serif; /* Fuente personalizada */  
 }
+
+.normal-text {
+  display: inline-block;
+  font-size: 30px;
+  transform: skew(20deg); /* Revertir la inclinación del texto */
+}
+
 
 .parallelogram-button:hover {
   background: #5a1a94;
+  border-color: yellow;
+  border: 20px;
 }
 
 /* Estilos Responsivos */
@@ -138,6 +145,7 @@ nav a:hover::after {
   }
 }
 
+
 @media (max-width: 767px) {
   .nav-links {
     display: none;
@@ -164,3 +172,14 @@ nav a:hover::after {
     font-size: 1.25rem;
   }
 }
+
+.tech-bar {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+
+
