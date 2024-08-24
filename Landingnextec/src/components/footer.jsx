@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Left Section - Logo */}
         <div className="mb-4 md:mb-0">
-          <h2 className="text-2xl font-bold">Nextec</h2>
+          <h2 className="text-2xl ">Nextec</h2>
         </div>
 
         {/* Center Section - Social Media Icons */}
