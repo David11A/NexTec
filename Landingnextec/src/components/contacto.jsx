@@ -13,7 +13,8 @@ const Contacto = () => {
       
       </div>
       <div className="absolute inset-0 bg-black opacity-50"></div>
-      <div className="container mx-auto px-12 relative z-10">
+      <div className="container mx-auto px-4 md:px-12 relative">
+
        
         <div className="flex flex-col lg:flex-row justify-between items-start space-y-8 lg:space-y-0 lg:space-x-8">
           {/* Formulario de contacto */}

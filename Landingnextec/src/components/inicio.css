@@ -1,8 +1,7 @@
+/* General Styles */
 body {
   font-family: 'DM Sans', sans-serif;
-  
 }
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Russo One', sans-serif;
@@ -59,8 +58,6 @@ nav a::after {
   transition: all 0.3s ease-in-out;
 }
 
-
-
 .nav-link::after {
   content: '';
   position: absolute;
@@ -75,7 +72,7 @@ nav a::after {
 }
 
 .nav-link:hover::after {
-  opacity: 1; /* No sliding in effect, just appears */
+  opacity: 1;
 }
 
 .banner-section {
@@ -84,7 +81,7 @@ nav a::after {
 }
 
 .social-icons {
-  margin-left: auto; /* Push icons to the right */
+  margin-left: auto;
 }
 
 .banner-section h1 {
@@ -95,22 +92,16 @@ nav a::after {
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.062), 0 1px 3px rgba(0, 0, 0, 0);
 }
 
-
-
-
-
 .parallelogram-button {
-  @apply bg-purple-700 text-white text-lg py-3 px-6 border-none transition-transform duration-300;
-  transform: skew(-20deg); /* Forma de paralelogramo */
-  font-family: 'DM Sans', sans-serif; /* Fuente personalizada */  
+  transform: skew(-20deg);
+  font-family: 'DM Sans', sans-serif;
 }
 
 .normal-text {
   display: inline-block;
   font-size: 30px;
-  transform: skew(20deg); /* Revertir la inclinación del texto */
+  transform: skew(20deg);
 }
-
 
 .parallelogram-button:hover {
   background: #5a1a94;
@@ -118,15 +109,9 @@ nav a::after {
   border: 20px;
 }
 
-/* Estilos Responsivos */
-.banner-title {
-  font-size: 4rem;
-}
+/* Responsive Styles */
 
-.banner-subtitle {
-  font-size: 1.5rem;
-}
-
+/* Medium screens and up */
 @media (min-width: 768px) {
   .banner-title {
     font-size: 6rem;
@@ -136,6 +121,7 @@ nav a::after {
   }
 }
 
+/* Large screens and up */
 @media (min-width: 1024px) {
   .banner-title {
     font-size: 9rem;
@@ -145,41 +131,67 @@ nav a::after {
   }
 }
 
-
+/* Small screens and below */
 @media (max-width: 767px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Align to the left */
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
     z-index: 9;
+    padding: 10px;
   }
+
   .nav-links.block {
     display: flex;
   }
+
   .nav-link {
-    padding: 1rem;
+    padding: 1.5rem 2rem; /* Larger padding for bigger click area */
+    font-size: 1.5rem; /* Larger text size */
+    text-align: left; /* Align text to the left */
+ 
+  }
+
+  .nav-link:last-child {
+    border-bottom: none; /* Remove separator from the last item */
   }
 
   .banner-title {
     font-size: 3rem;
   }
+
   .banner-subtitle {
     font-size: 1.25rem;
   }
+
+  /* Additional responsive styles */
+  .parallelogram-button {
+    transform: none;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .normal-text {
+    font-size: 24px;
+    transform: none;
+  }
+
+  .fixed-header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 15px;
+  }
+
+  nav a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .nav-link:hover::after {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
 }
-
-.tech-bar {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
-  text-align: center;
-  font-size: 1rem;
-  backdrop-filter: blur(10px);
-}
-
-
-
