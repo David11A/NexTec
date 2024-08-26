@@ -85,7 +85,7 @@ const Inicio = () => {
         </div>
 
         {/* Barra de tecnologías */}
-        <div className="tech-bar absolute bottom-0 left-0 right-0 flex justify-center items-center text-white">
+        <div className="tech-bar text-center absolute bottom-0 left-0 right-0 flex justify-center items-center text-white">
           <p>React JS / React Native / Angular / Wordpress / Node.js / MySQL / PostgreSQL</p>
         </div>
       </section>
