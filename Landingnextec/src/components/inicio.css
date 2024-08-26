@@ -104,8 +104,6 @@ nav a::after {
 }
 
 .parallelogram-button:hover {
-  background: #5a1a94;
-  border-color: yellow;
   border: 20px;
 }
 
