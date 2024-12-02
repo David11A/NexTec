@@ -1,0 +1,120 @@
+/* Contacto.css */
+
+@media (max-width: 768px) {
+  /* En pantallas pequeñas, apila los elementos */
+  .flex-col {
+    flex-direction: column;
+  }
+
+  .mb-8 {
+    margin-bottom: 2rem;
+  }
+
+  .md\\:mb-0 {
+    margin-bottom: 0;
+  }
+
+  .md\\:flex-row {
+    flex-direction: row;
+  }
+}
+
+/* Estilo para el contenedor de herramientas */
+.herramientas {
+  margin-top: 1.5rem;
+}
+
+/* Otros estilos aquí */
+
+
+
+
+.object-cover {
+  object-fit: cover;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.bg-opacity-90 {
+  background-opacity: 0.9;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray-300 {
+  color: #e2e8f0;
+}
+
+.text-gray-400 {
+  color: #cbd5e0;
+}
+
+.bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.text-green-500 {
+  color: #48bb78;
+}
+
+.text-blue-400 {
+  color: #63b3ed;
+}
+
+.text-blue-600 {
+  color: #3182ce;
+}
+
+.text-blue-800 {
+  color: #2c5282;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.focus\:outline-none:focus {
+  outline: 0;
+}
+
+.hover\:bg-orange-600:hover {
+  background-color: #dd6b20;
+}
+
+.transition {
+  transition: all 0.3s;
+}
+
+.duration-300 {
+  transition-duration: 0.3s;
+}
+
+
+
+
+
+

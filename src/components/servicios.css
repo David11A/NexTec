@@ -1,0 +1,154 @@
+/* servicios.css */
+/* servicios.css */
+.accordion {
+  margin-top: 1rem;
+}
+
+.accordion-item {
+  margin-bottom: 0.5rem;
+}
+
+.accordion-header {
+  background: #141414; /* Gris oscuro */
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.accordion-header:hover {
+  background: #3a3a3a; /* Gris más claro al pasar el ratón */
+}
+
+.accordion-toggle {
+  font-size: 1.2rem;
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  background: #252525; /* Color de fondo del contenido */
+  padding: 0 1rem;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Ajusta según el contenido */
+  padding: 1rem;
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.service-card-content {
+  transform: skew(5deg);
+  height: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 10px; /* Ajuste del espacio interno */
+}
+
+.parallelogram {
+  transform: skew(-5deg);
+  display: inline-block;
+}
+
+.skew-fix {
+  display: inline-block;
+  transform: skew(5deg);
+}
+
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.service-card {
+  width: 100%;
+  max-width: 300px; /* Ajuste del ancho máximo */
+  height: 300px;
+  transform: skew(-5deg);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  flex: 1 1 calc(33.33% - 20px); /* Ajuste de flexibilidad */
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 calc(50% - 20px); /* Ajuste para pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card {
+    flex: 1 1 100%; /* Ajuste para pantallas pequeñas */
+    height: 200px; /* Ajuste de altura en pantallas pequeñas */
+  }
+}
+
+.service-card-content {
+  transform: skew(0deg);
+  height: 100%;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.service-card img {
+  transition: transform 0.3s ease;
+  transform: skew(5deg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+.service-card:hover img {
+  transform: scale(1.1);
+  transform: skew(3deg);
+}
+
+.service-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #141414;
+  padding: 10px;
+  transform: skew(5deg);
+}
+
+.service-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: skew(-5deg);
+  border: 2px solid transparent;
+  font-size: 18px;
+}
+
+.pagination-item.active {
+  border: 2px solid white;
+}
+
+.company-policies {
+  background-color: black;
+  color: white;
+
+}
